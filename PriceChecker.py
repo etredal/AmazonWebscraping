@@ -19,7 +19,7 @@ def collectPrice(URL, headers):
 	page = requests.get(URL, headers = headers)
 
 	#Sometimes needs to be done twice
-	contentCollector1 = BeautifulSoup(page.content, "html.parser")
+	contentCollector1 = BeautifulSoup(page.content, "lxml")
 	contentCollector2 = BeautifulSoup(contentCollector1.prettify(), "html.parser")
 
 	#Tags that are used on amazon
